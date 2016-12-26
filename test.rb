@@ -22,8 +22,10 @@ JSON.load(`curl -X GET http://localhost:9393/tracking/u6qy9`)
 
 redis.exists "short_id:u6qy9"
 
+redis = Redis.new
 
 def check shortcode
+  redis = Redis.new
   if redis.exists "short_id:#{shortcode}"
     puts "This shortcode already exists"
   else
