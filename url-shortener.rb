@@ -46,7 +46,8 @@ end
 get '/tracking/:shortcode' do
   if params[:shortcode] and not params[:shortcode].empty?
     content_type :json
-    click = redis.hget "short_id:#{params[:shortcode]}", "visits"
+    c = redis.hget "short_id:#{params[:shortcode]}", "visits"
+    click = c.to_i - 1
     click.to_json
   end
 end
