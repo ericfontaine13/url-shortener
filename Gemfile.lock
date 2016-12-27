@@ -24,6 +24,7 @@ PLATFORMS
 
 DEPENDENCIES
   rake
+  redis
   redis-sinatra
   shotgun
   sinatra
