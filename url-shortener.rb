@@ -1,4 +1,9 @@
-
+require "rake"
+require "redis"
+require "sinatra"
+require "shotgun"
+require "redis-sinatra"
+require "json"
 
 URL_SHORT_BASE = "http://repo.st/"
 
